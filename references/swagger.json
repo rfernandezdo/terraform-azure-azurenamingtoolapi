@@ -1,0 +1,3466 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Azure Naming Tool API",
+    "description": "An ASP.NET Core Web API for managing the Azure Naming tool configuration. All API requests require the configured API Keys (found in the site Admin configuration). You can find more details in the <a href=\"https://github.com/mspnp/AzureNamingTool/wiki/Using-the-API\" target=\"_new\">Azure Naming Tool API documentation</a>.",
+    "version": "v4.3.2"
+  },
+  "paths": {
+    "/api/Admin/UpdatePassword": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will update the Global Admin Password.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "string - New Global Admin Password",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/UpdateAPIKey": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will update the Full Access API Key.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "string - New Full Access API Key",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/GenerateAPIKey": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will generate a new Full Access API Key.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/UpdateNameGenerationAPIKey": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will update the Name Generation API Key.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "string - Name Generation API Key",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/GenerateNameGenerationAPIKey": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will generate a new Name Generation API Key.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/UpdateReadOnlyAPIKey": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will update the Read-Only API Key.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "string - New Read-Only API Key",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/GenerateReadOnlyAPIKey": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will generate a new Read-Only API Key.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/GetAdminLog": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will return the admin log data.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/PurgeAdminLog": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will purge the admin log data.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/GetGeneratedNamesLog": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will return the generated names data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/GetGeneratedName/{id}": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will return the generated names data by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Generated Name id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/DeleteGeneratedName/{id}": {
+      "delete": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will delete the generated names data by ID.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Admin password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Generated Name id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/PurgeGeneratedNamesLog": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will purge the generated names data.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Admin/ResetSiteConfiguration": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "This function will reset the site configuration. THIS CANNOT BE UNDONE!",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomComponents": {
+      "get": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "This function will return the custom components data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "This function will create/update the specified custom component data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "CustomComponent (json) - Custom component data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomComponent"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomComponent"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomComponent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomComponents/GetByParentComponentId/{parentcomponentid}": {
+      "get": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "This function will return the custom components data for the specifc parent component id.",
+        "parameters": [
+          {
+            "name": "parentcomponentid",
+            "in": "path",
+            "description": "int - Parent Component Id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomComponents/GetByParentType/{parenttype}": {
+      "get": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "This function will return the custom components data for the specifc parent component type (name).",
+        "parameters": [
+          {
+            "name": "parenttype",
+            "in": "path",
+            "description": "string - Parent Component Type Name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomComponents/{id}": {
+      "get": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "This function will return the specifed custom component data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Custom Component id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "This function will delete the specifed custom component data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Custom component id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomComponents/PostConfig": {
+      "post": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "This function will update all custom components data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List-CustomComponent (json) - All custom components data. (Legacy functionality).",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CustomComponent"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CustomComponent"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CustomComponent"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomComponents/PostConfigWithParentData": {
+      "post": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "This function will update all custom components data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "CustomComponmentConfig (json) - Full custom components data with parent component data.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomComponmentConfig"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomComponmentConfig"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomComponmentConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomComponents/DeleteByParentComponentId/{parentcomponentid}": {
+      "delete": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "This function will delete the custom component data for the specifed parent component id.",
+        "parameters": [
+          {
+            "name": "parentcomponentid",
+            "in": "path",
+            "description": "int - Parent component id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ImportExport/ExportConfiguration": {
+      "get": {
+        "tags": [
+          "ImportExport"
+        ],
+        "summary": "This function will export the current configuration data (all components) as a single JSON file.",
+        "parameters": [
+          {
+            "name": "includeAdmin",
+            "in": "query",
+            "description": "Flag indicating whether to include admin data in the export",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ImportExport/ImportConfiguration": {
+      "post": {
+        "tags": [
+          "ImportExport"
+        ],
+        "summary": "This function will import the provided configuration data (all components). This will overwrite the existing configuration data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Tool configuration file in JSON format",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfigurationData"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfigurationData"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfigurationData"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceComponents": {
+      "get": {
+        "tags": [
+          "ResourceComponents"
+        ],
+        "summary": "This function will return the components data.",
+        "parameters": [
+          {
+            "name": "admin",
+            "in": "query",
+            "description": "bool - All/Only-enabled components flag",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceComponents"
+        ],
+        "summary": "This function will create or update the specified component data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceComponent (json) - Component data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceComponent"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceComponent"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceComponent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceComponents/{id}": {
+      "get": {
+        "tags": [
+          "ResourceComponents"
+        ],
+        "summary": "This function will return the specified resource component data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Resource Component id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceComponents/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceComponents"
+        ],
+        "summary": "This function will update all components data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List - ResourceComponent (json) - All components configuration data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceComponent"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceComponent"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceComponent"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceDelimiters": {
+      "get": {
+        "tags": [
+          "ResourceDelimiters"
+        ],
+        "summary": "This function will return the delimiters data.",
+        "parameters": [
+          {
+            "name": "admin",
+            "in": "query",
+            "description": "bool - All/Only-enabled delimiters flag",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceDelimiters"
+        ],
+        "summary": "This function will create/update the specified delimiter data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceDelimiter (json) - Delimiter data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceDelimiter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceDelimiter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceDelimiter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceDelimiters/{id}": {
+      "get": {
+        "tags": [
+          "ResourceDelimiters"
+        ],
+        "summary": "This function will return the specifed resource delimiter data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Resource Delimiter id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceDelimiters/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceDelimiters"
+        ],
+        "summary": "This function will update all delimiters data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List - ResourceDelimiter (json) - All delimiters data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceDelimiter"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceDelimiter"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceDelimiter"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceEnvironments": {
+      "get": {
+        "tags": [
+          "ResourceEnvironments"
+        ],
+        "summary": "This function will return the environments data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceEnvironments"
+        ],
+        "summary": "This function will create/update the specified environment data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceEnvironment (json) - Environment data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceEnvironment"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceEnvironment"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceEnvironment"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceEnvironments/{id}": {
+      "get": {
+        "tags": [
+          "ResourceEnvironments"
+        ],
+        "summary": "This function will return the specifed environment data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Environment id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResourceEnvironments"
+        ],
+        "summary": "This function will delete the specifed environment data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Environment id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceEnvironments/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceEnvironments"
+        ],
+        "summary": "This function will update all environments data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List - ResourceEnvironment (json) - All environments data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceEnvironment"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceEnvironment"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceEnvironment"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceFunctions": {
+      "get": {
+        "tags": [
+          "ResourceFunctions"
+        ],
+        "summary": "This function will return the functions data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceFunctions"
+        ],
+        "summary": "This function will create/update the specified function data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceFunction (json) - Function data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceFunction"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceFunction"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceFunction"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceFunctions/{id}": {
+      "get": {
+        "tags": [
+          "ResourceFunctions"
+        ],
+        "summary": "This function will return the specifed function data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Function id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResourceFunctions"
+        ],
+        "summary": "This function will delete the specifed function data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Function id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceFunctions/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceFunctions"
+        ],
+        "summary": "This function will update all functions data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List - ResourceFunction (json) - All functions data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceFunction"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceFunction"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceFunction"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceLocations": {
+      "get": {
+        "tags": [
+          "ResourceLocations"
+        ],
+        "summary": "This function will return the locations data.",
+        "parameters": [
+          {
+            "name": "admin",
+            "in": "query",
+            "description": "bool - Indicates if the user is an admin",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceLocations/{id}": {
+      "get": {
+        "tags": [
+          "ResourceLocations"
+        ],
+        "summary": "This function will return the specified location data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Location id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceLocations/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceLocations"
+        ],
+        "summary": "This function will update all locations data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List - ResourceLocation (json) - All locations data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceLocation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceLocation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceLocation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceNamingRequests/RequestNameWithComponents": {
+      "post": {
+        "tags": [
+          "ResourceNamingRequests"
+        ],
+        "summary": "This function will generate a resource type name for specified component values. This function requires full definition for all components. It is recommended to use the RequestName API function for name generation.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceNameRequestWithComponents (json) - Resource Name Request data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequestWithComponents"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequestWithComponents"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequestWithComponents"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceNamingRequests/RequestName": {
+      "post": {
+        "tags": [
+          "ResourceNamingRequests"
+        ],
+        "summary": "This function will generate a resource type name for specified component values, using a simple data format.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceNameRequest (json) - Resource Name Request data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceNamingRequests/ValidateName": {
+      "post": {
+        "tags": [
+          "ResourceNamingRequests"
+        ],
+        "summary": "This function will validate the name for the specified resource type. NOTE: This function does not validate using the tool configuration, only the regex for the specified resource type. Use the RequestName function to validate using the tool configuration.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ValidateNameRequest (json) - Validate Name Request data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateNameRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateNameRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateNameRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceOrgs": {
+      "get": {
+        "tags": [
+          "ResourceOrgs"
+        ],
+        "summary": "This function will return the orgs data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceOrgs"
+        ],
+        "summary": "This function will create/update the specified org data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceOrg (json) - Org data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceOrg"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceOrg"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceOrg"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceOrgs/{id}": {
+      "get": {
+        "tags": [
+          "ResourceOrgs"
+        ],
+        "summary": "This function will return the specifed org data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Org id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResourceOrgs"
+        ],
+        "summary": "This function will delete the specifed org data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Org id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceOrgs/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceOrgs"
+        ],
+        "summary": "This function will update all orgs data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List - ResourceOrg (json) - All orgs data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceOrg"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceOrg"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceOrg"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceProjAppSvcs": {
+      "get": {
+        "tags": [
+          "ResourceProjAppSvcs"
+        ],
+        "summary": "This function will return the projects/apps/services data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceProjAppSvcs"
+        ],
+        "summary": "This function will create/update the specified project/app/service data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceProjAppSvc (json) - Project/App/Service data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceProjAppSvc"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceProjAppSvc"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceProjAppSvc"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceProjAppSvcs/{id}": {
+      "get": {
+        "tags": [
+          "ResourceProjAppSvcs"
+        ],
+        "summary": "This function will return the specified project/app/service data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Project/App/Service id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResourceProjAppSvcs"
+        ],
+        "summary": "This function will delete the specified project/app/service data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Project/App/Service id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceProjAppSvcs/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceProjAppSvcs"
+        ],
+        "summary": "This function will update all projects/apps/services data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List - ResourceProjAppSvc (json) - All projects/apps/services data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceProjAppSvc"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceProjAppSvc"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceProjAppSvc"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceTypes": {
+      "get": {
+        "tags": [
+          "ResourceTypes"
+        ],
+        "summary": "This function will return the resource types data.",
+        "parameters": [
+          {
+            "name": "admin",
+            "in": "query",
+            "description": "bool - Indicates if the user is an admin (optional)",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceTypes/{id}": {
+      "get": {
+        "tags": [
+          "ResourceTypes"
+        ],
+        "summary": "This function will return the specified resource type data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Resource Type id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceTypes/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceTypes"
+        ],
+        "summary": "This function will update all resource types data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List - ResourceType (json) - All resource types data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceType"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceType"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceType"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceTypes/UpdateTypeComponents": {
+      "post": {
+        "tags": [
+          "ResourceTypes"
+        ],
+        "summary": "This function will update all resource types for the specified component.",
+        "parameters": [
+          {
+            "name": "operation",
+            "in": "query",
+            "description": "string - Operation type (optional-add, optional-remove, exlcude-add, exclude-remove)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "componentid",
+            "in": "query",
+            "description": "int - Component ID",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceUnitDepts": {
+      "get": {
+        "tags": [
+          "ResourceUnitDepts"
+        ],
+        "summary": "This function will return the units/depts data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceUnitDepts"
+        ],
+        "summary": "This function will create/update the specified unit/dept data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceUnitDept (json) - Unit/Dept data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceUnitDept"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceUnitDept"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceUnitDept"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceUnitDepts/{id}": {
+      "get": {
+        "tags": [
+          "ResourceUnitDepts"
+        ],
+        "summary": "This function will return the specifed unit/dept data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Unit/Dept id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResourceUnitDepts"
+        ],
+        "summary": "This function will delete the specifed unit/dept data.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Unit/Dept id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ResourceUnitDepts/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceUnitDepts"
+        ],
+        "summary": "This function will update all units/depts data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List - ResourceUnitDept (json) - All units/depts data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceUnitDept"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceUnitDept"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceUnitDept"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdminLogMessage": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the log message.",
+            "format": "int64",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "description": "Gets or sets the date and time when the log message was created.",
+            "format": "date-time"
+          },
+          "title": {
+            "type": "string",
+            "description": "Gets or sets the title of the log message.",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Gets or sets the content of the log message.",
+            "nullable": true
+          },
+          "source": {
+            "type": "string",
+            "description": "Gets or sets the source of the log message.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents an admin log message."
+      },
+      "AdminUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the admin user.",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "description": "Gets or sets the name of the admin user.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents an admin user."
+      },
+      "ConfigurationData": {
+        "type": "object",
+        "properties": {
+          "resourceComponents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceComponent"
+            },
+            "description": "Gets or sets the list of resource components.",
+            "nullable": true
+          },
+          "resourceDelimiters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceDelimiter"
+            },
+            "description": "Gets or sets the list of resource delimiters.",
+            "nullable": true
+          },
+          "resourceEnvironments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceEnvironment"
+            },
+            "description": "Gets or sets the list of resource environments.",
+            "nullable": true
+          },
+          "resourceLocations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceLocation"
+            },
+            "description": "Gets or sets the list of resource locations.",
+            "nullable": true
+          },
+          "resourceOrgs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceOrg"
+            },
+            "description": "Gets or sets the list of resource organizations.",
+            "nullable": true
+          },
+          "resourceProjAppSvcs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceProjAppSvc"
+            },
+            "description": "Gets or sets the list of resource project application services.",
+            "nullable": true
+          },
+          "resourceTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceType"
+            },
+            "description": "Gets or sets the list of resource types.",
+            "nullable": true
+          },
+          "resourceUnitDepts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceUnitDept"
+            },
+            "description": "Gets or sets the list of resource unit departments.",
+            "nullable": true
+          },
+          "resourceFunctions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceFunction"
+            },
+            "description": "Gets or sets the list of resource functions.",
+            "nullable": true
+          },
+          "customComponents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomComponent"
+            },
+            "description": "Gets or sets the list of custom components.",
+            "nullable": true
+          },
+          "generatedNames": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GeneratedName"
+            },
+            "description": "Gets or sets the list of generated names.",
+            "nullable": true
+          },
+          "adminLogs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminLogMessage"
+            },
+            "description": "Gets or sets the list of admin log messages.",
+            "nullable": true
+          },
+          "adminUsers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminUser"
+            },
+            "description": "Gets or sets the list of admin users.",
+            "nullable": true
+          },
+          "saltKey": {
+            "type": "string",
+            "description": "Gets or sets the SALT key.",
+            "nullable": true
+          },
+          "adminPassword": {
+            "type": "string",
+            "description": "Gets or sets the admin password.",
+            "nullable": true
+          },
+          "apiKey": {
+            "type": "string",
+            "description": "Gets or sets the API key.",
+            "nullable": true
+          },
+          "readOnlyAPIKey": {
+            "type": "string",
+            "description": "Gets or sets the read-only API key.",
+            "nullable": true
+          },
+          "nameGenerationAPIKey": {
+            "type": "string",
+            "description": "Gets or sets the Name Generation API key.",
+            "nullable": true
+          },
+          "dismissedAlerts": {
+            "type": "string",
+            "description": "Gets or sets the dismissed alerts.",
+            "nullable": true
+          },
+          "duplicateNamesAllowed": {
+            "type": "string",
+            "description": "Gets or sets whether duplicate names are allowed.",
+            "nullable": true
+          },
+          "generationWebhook": {
+            "type": "string",
+            "description": "Gets or sets the generation webhook.",
+            "nullable": true
+          },
+          "connectivityCheckEnabled": {
+            "type": "string",
+            "description": "Gets or sets whether connectivity check is enabled.",
+            "nullable": true
+          },
+          "identityHeaderName": {
+            "type": "string",
+            "description": "Gets or sets the identity header name.",
+            "nullable": true
+          },
+          "resourceTypeEditingAllowed": {
+            "type": "string",
+            "description": "Gets or sets whether resource type editing is allowed.",
+            "nullable": true
+          },
+          "autoIncrementResourceInstance": {
+            "type": "string",
+            "description": "Gets or sets whether auto-increment resource instance is enabled.",
+            "nullable": true
+          },
+          "instructionsEnabled": {
+            "type": "string",
+            "description": "Gets or sets whether instructions are enabled.",
+            "nullable": true
+          },
+          "generatedNamesLogEnabled": {
+            "type": "string",
+            "description": "Gets or sets whether generated names log is enabled.",
+            "nullable": true
+          },
+          "referenceEnabled": {
+            "type": "string",
+            "description": "Gets or sets a value indicating whether reference is enabled.",
+            "nullable": true
+          },
+          "configurationEnabled": {
+            "type": "string",
+            "description": "Gets or sets a value indicating whether configuration is enabled.",
+            "nullable": true
+          },
+          "latestNewsEnabled": {
+            "type": "string",
+            "description": "Gets or sets whether latest news is enabled.",
+            "nullable": true
+          },
+          "retainGenerateSelections": {
+            "type": "string",
+            "description": "Gets or sets whether retaining of Generate opage selections is enabled.",
+            "nullable": true
+          },
+          "customHomeContent": {
+            "type": "string",
+            "description": "Gets or sets custom Home content.",
+            "nullable": true
+          },
+          "customLogoPath": {
+            "type": "string",
+            "description": "Gets or sets custom Logo path.",
+            "nullable": true
+          },
+          "customToolName": {
+            "type": "string",
+            "description": "Gets or sets custom tool name.",
+            "nullable": true
+          },
+          "showAdminDetailsToAllUsers": {
+            "type": "string",
+            "description": "Gets or sets whether admin details are shown to all users.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the configuration data for the application."
+      },
+      "CustomComponent": {
+        "required": [
+          "name",
+          "parentComponent",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the custom component.",
+            "format": "int64"
+          },
+          "parentComponent": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the parent component of the custom component."
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the custom component."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the custom component."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the custom component.",
+            "format": "int32"
+          },
+          "minLength": {
+            "type": "string",
+            "description": "Gets or sets the minimum length of the custom component.",
+            "nullable": true
+          },
+          "maxLength": {
+            "type": "string",
+            "description": "Gets or sets the maximum length of the custom component.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a custom component."
+      },
+      "CustomComponmentConfig": {
+        "type": "object",
+        "properties": {
+          "parentComponents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceComponent"
+            },
+            "description": "Gets or sets the parent components.",
+            "nullable": true
+          },
+          "customComponents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomComponent"
+            },
+            "description": "Gets or sets the custom components.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the configuration for custom components."
+      },
+      "GeneratedName": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the generated name.",
+            "format": "int64"
+          },
+          "createdOn": {
+            "type": "string",
+            "description": "Gets or sets the date and time when the generated name was created.",
+            "format": "date-time"
+          },
+          "resourceName": {
+            "type": "string",
+            "description": "Gets or sets the resource name.",
+            "nullable": true
+          },
+          "resourceTypeName": {
+            "type": "string",
+            "description": "Gets or sets the resource type name.",
+            "nullable": true
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "description": "Gets or sets the components of the generated name.",
+            "nullable": true
+          },
+          "user": {
+            "type": "string",
+            "description": "Gets or sets the user who generated the name.",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Gets or sets the optional message associated with the generated name.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a generated name."
+      },
+      "ResourceComponent": {
+        "required": [
+          "displayName",
+          "enabled",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource component.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource component."
+          },
+          "displayName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the display name of the resource component."
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource component is enabled."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource component.",
+            "format": "int32"
+          },
+          "isCustom": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource component is custom."
+          },
+          "isFreeText": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource component is free text."
+          },
+          "minLength": {
+            "type": "string",
+            "description": "Gets or sets the minimum length of the resource component.",
+            "nullable": true
+          },
+          "maxLength": {
+            "type": "string",
+            "description": "Gets or sets the maximum length of the resource component.",
+            "nullable": true
+          },
+          "enforceRandom": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether to enforce randomization of the resource component."
+          },
+          "alphanumeric": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource component should be alphanumeric."
+          },
+          "applyDelimiterBefore": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether to apply a delimiter before the resource component."
+          },
+          "applyDelimiterAfter": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether to apply a delimiter after the resource component."
+          },
+          "description": {
+            "type": "string",
+            "description": "Gets or sets the resource component description.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource component."
+      },
+      "ResourceDelimiter": {
+        "required": [
+          "enabled",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource delimiter.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource delimiter."
+          },
+          "delimiter": {
+            "type": "string",
+            "description": "Gets or sets the delimiter of the resource delimiter.",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource delimiter is enabled."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource delimiter.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource delimiter."
+      },
+      "ResourceEnvironment": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource environment.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource environment."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource environment."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource environment.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource environment."
+      },
+      "ResourceFunction": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource function.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource function."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource function."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource function.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource function."
+      },
+      "ResourceLocation": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource location.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource location."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource location."
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource location is enabled."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource location."
+      },
+      "ResourceNameRequest": {
+        "type": "object",
+        "properties": {
+          "resourceEnvironment": {
+            "type": "string",
+            "description": "Gets or sets the resource environment.",
+            "nullable": true
+          },
+          "resourceFunction": {
+            "type": "string",
+            "description": "Gets or sets the resource function.",
+            "nullable": true
+          },
+          "resourceInstance": {
+            "type": "string",
+            "description": "Gets or sets the resource instance.",
+            "nullable": true
+          },
+          "resourceLocation": {
+            "type": "string",
+            "description": "Gets or sets the resource location.",
+            "nullable": true
+          },
+          "resourceOrg": {
+            "type": "string",
+            "description": "Gets or sets the resource organization.",
+            "nullable": true
+          },
+          "resourceProjAppSvc": {
+            "type": "string",
+            "description": "Gets or sets the resource project or application service.",
+            "nullable": true
+          },
+          "resourceType": {
+            "type": "string",
+            "description": "Gets or sets the resource type.",
+            "nullable": true
+          },
+          "resourceUnitDept": {
+            "type": "string",
+            "description": "Gets or sets the resource unit or department.",
+            "nullable": true
+          },
+          "customComponents": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Gets or sets the custom components.",
+            "nullable": true
+          },
+          "resourceId": {
+            "type": "integer",
+            "description": "Gets or sets the resource ID.",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "Gets or sets the creator of the resource.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource name request."
+      },
+      "ResourceNameRequestWithComponents": {
+        "type": "object",
+        "properties": {
+          "resourceDelimiter": {
+            "$ref": "#/components/schemas/ResourceDelimiter"
+          },
+          "resourceEnvironment": {
+            "$ref": "#/components/schemas/ResourceEnvironment"
+          },
+          "resourceFunction": {
+            "$ref": "#/components/schemas/ResourceFunction"
+          },
+          "resourceInstance": {
+            "type": "string",
+            "description": "Represents the resource instance.",
+            "nullable": true
+          },
+          "resourceLocation": {
+            "$ref": "#/components/schemas/ResourceLocation"
+          },
+          "resourceOrg": {
+            "$ref": "#/components/schemas/ResourceOrg"
+          },
+          "resourceProjAppSvc": {
+            "$ref": "#/components/schemas/ResourceProjAppSvc"
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/ResourceType"
+          },
+          "resourceUnitDept": {
+            "$ref": "#/components/schemas/ResourceUnitDept"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource name request with components."
+      },
+      "ResourceOrg": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource organization.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource organization."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource organization."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource organization.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource organization."
+      },
+      "ResourceProjAppSvc": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource project application service.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource project application service."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource project application service."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource project application service.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource project application service."
+      },
+      "ResourceType": {
+        "required": [
+          "resource"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource type.",
+            "format": "int64"
+          },
+          "resource": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the resource name."
+          },
+          "optional": {
+            "type": "string",
+            "description": "Gets or sets the optional value.",
+            "nullable": true
+          },
+          "exclude": {
+            "type": "string",
+            "description": "Gets or sets the exclude value.",
+            "nullable": true
+          },
+          "property": {
+            "type": "string",
+            "description": "Gets or sets the property value.",
+            "nullable": true
+          },
+          "ShortName": {
+            "type": "string",
+            "description": "Gets or sets the short name.",
+            "nullable": true
+          },
+          "scope": {
+            "type": "string",
+            "description": "Gets or sets the scope value.",
+            "nullable": true
+          },
+          "lengthMin": {
+            "type": "string",
+            "description": "Gets or sets the minimum length value.",
+            "nullable": true
+          },
+          "lengthMax": {
+            "type": "string",
+            "description": "Gets or sets the maximum length value.",
+            "nullable": true
+          },
+          "validText": {
+            "type": "string",
+            "description": "Gets or sets the valid text value.",
+            "nullable": true
+          },
+          "invalidText": {
+            "type": "string",
+            "description": "Gets or sets the invalid text value.",
+            "nullable": true
+          },
+          "invalidCharacters": {
+            "type": "string",
+            "description": "Gets or sets the invalid characters value.",
+            "nullable": true
+          },
+          "invalidCharactersStart": {
+            "type": "string",
+            "description": "Gets or sets the invalid characters start value.",
+            "nullable": true
+          },
+          "invalidCharactersEnd": {
+            "type": "string",
+            "description": "Gets or sets the invalid characters end value.",
+            "nullable": true
+          },
+          "invalidCharactersConsecutive": {
+            "type": "string",
+            "description": "Gets or sets the invalid consecutive characters value.",
+            "nullable": true
+          },
+          "regx": {
+            "type": "string",
+            "description": "Gets or sets the regular expression value.",
+            "nullable": true
+          },
+          "staticValues": {
+            "type": "string",
+            "description": "Gets or sets the static values.",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource type is enabled."
+          },
+          "applyDelimiter": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether to apply delimiter."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource type."
+      },
+      "ResourceUnitDept": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource unit department.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource unit department."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource unit department."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource unit department.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource unit department."
+      },
+      "ValidateNameRequest": {
+        "type": "object",
+        "properties": {
+          "resourceTypeId": {
+            "type": "integer",
+            "description": "Gets or sets the resource type ID.",
+            "format": "int64",
+            "nullable": true
+          },
+          "resourceType": {
+            "type": "string",
+            "description": "Gets or sets the resource type.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Gets or sets the name to be validated.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a request to validate a name."
+      }
+    }
+  }
+}
