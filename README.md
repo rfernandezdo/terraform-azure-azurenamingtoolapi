@@ -6,13 +6,12 @@ This module generates Azure resource names using the Azure Naming Tool API.
 
 ```hcl
 module "azurenamingtool" {
-  source           = "git::https://github.com/rfernandezdo/azurenamingtool_module.git"
+  source           = "rfernandezdo/azurenamingtoolapi/azure"
   api_key          = var.api_key
   tenant_id        = var.tenant_id
   client_id        = var.client_id
   client_secret    = var.client_secret
   api_url          = var.api_url
-  resource_type    = var.resource_type
   components       = var.components
 }
 ```
