@@ -19,8 +19,12 @@ module "azurenamingtool" {
 ## Variables
 - `api_key`: The API key for Azure Naming Tool, Name Generation API Key.
 - `api_url`: The base URL of the Azure Naming Tool API (e.g., [https://azurenamingtool-xxxx.azurewebsites.net/api/](https://azurenamingtool-xxxx.azurewebsites.net/api/)).
-- `resource_type`: The Azure resource type (e.g., "redis").
+- `tenant_id`: The Azure Active Directory tenant ID.
+- `client_id`: The Azure Active Directory client ID.
+- `client_secret`: The Azure Active Directory client secret.
 - `components`: A map of component names and their values (e.g., { ResourceEnvironment = "prd", ResourceInstance = "2", ResourceLocation = "eu", ResourceProjAppSvc = "spa" }).
+
+For more details on the `components` variable, refer to your "https://azurenamingtool-*.azurewebsites.net/swagger/index.html" documentation, review /api/ResourceNamingRequests/RequestName endpoint documentation.
 
 ## Outputs
 - `generated_name`: The generated resource name.
