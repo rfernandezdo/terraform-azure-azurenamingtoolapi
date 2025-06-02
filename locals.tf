@@ -1,5 +1,5 @@
 locals {
-  request_body = merge(var.components, { ResourceType = var.resource_type })
+  request_body = var.components
 
   access_token = data.external.aad_token.result.access_token
 }
