@@ -1,0 +1,15 @@
+api_key       = "YOUR_API_KEY"
+client_id     = "YOUR_CLIENT_ID"
+tenant_id     = "YOUR_TENANT_ID"
+client_secret = "YOUR_CLIENT_SECRET"
+api_app_id    = "YOUR_API_APP_ID"
+api_url       = "YOUR_AZURENAMINGTOOL_URL"
+components = {
+  "resourceEnvironment" : "dev",
+  "resourceInstance" : "025",
+  "resourceLocation" : "auc",
+  "resourceProjAppSvc" : "spa",
+  "resourceType" : "rg"
+}
+
+
