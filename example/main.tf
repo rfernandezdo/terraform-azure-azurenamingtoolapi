@@ -1,5 +1,5 @@
 module "azurenamingtool" {
-  source        = "../"
+  source        = "rfernandezdo/azurenamingtoolapi/azure"
   api_key       = var.api_key
   api_url       = var.api_url
   client_id     = var.client_id
