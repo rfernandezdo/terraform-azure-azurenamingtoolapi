@@ -13,6 +13,14 @@ output "generated_name" {
   value = module.azurenamingtool.generated_name
 }
 
+output "resource_name_not_generated" {
+  value = module.azurenamingtool.resource_name_not_generated
+}
+
+output "generated_name_id" {
+  value = module.azurenamingtool.generated_name_id
+}
+
 resource "azurerm_resource_group" "example" {
   name     = module.azurenamingtool.generated_name
   location = "West Europe"
@@ -22,4 +30,3 @@ resource "azurerm_resource_group" "example" {
   }
   depends_on = [module.azurenamingtool.show_name_generation]
 }
-
