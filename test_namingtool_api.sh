@@ -17,13 +17,13 @@ TENANT_ID=$(get_tfvar tenant_id)
 CLIENT_SECRET=$(get_tfvar client_secret)
 API_APP_ID=$(get_tfvar api_app_id)
 API_URL=$(get_tfvar api_url)
-RESOURCE_TYPE=$(get_tfvar resource_type)
 
 # Extract components from tfvars (assumes all are present)
-RESOURCE_ENV=$(grep 'ResourceEnvironment' "$VARS_FILE" | sed -E 's/.*:[[:space:]]*"([^"]*)".*/\1/')
-RESOURCE_INSTANCE=$(grep 'ResourceInstance' "$VARS_FILE" | sed -E 's/.*:[[:space:]]*"([^"]*)".*/\1/')
-RESOURCE_LOCATION=$(grep 'ResourceLocation' "$VARS_FILE" | sed -E 's/.*:[[:space:]]*"([^"]*)".*/\1/')
-RESOURCE_PROJAPPSVC=$(grep 'ResourceProjAppSvc' "$VARS_FILE" | sed -E 's/.*:[[:space:]]*"([^"]*)".*/\1/')
+RESOURCE_ENV=$(grep 'resourceEnvironment' "$VARS_FILE" | sed -E 's/.*:[[:space:]]*"([^"]*)".*/\1/')
+RESOURCE_INSTANCE=$(grep 'resourceInstance' "$VARS_FILE" | sed -E 's/.*:[[:space:]]*"([^"]*)".*/\1/')
+RESOURCE_LOCATION=$(grep 'resourceLocation' "$VARS_FILE" | sed -E 's/.*:[[:space:]]*"([^"]*)".*/\1/')
+RESOURCE_PROJAPPSVC=$(grep 'resourceProjAppSvc' "$VARS_FILE" | sed -E 's/.*:[[:space:]]*"([^"]*)".*/\1/')
+RESOURCE_TYPE=$(grep 'resourceType' "$VARS_FILE" | sed -E 's/.*:[[:space:]]*"([^"]*)".*/\1/')
 
 # Get access token
 ACCESS_TOKEN=$(curl -s -X POST "https://login.microsoftonline.com/$TENANT_ID/oauth2/v2.0/token" \
